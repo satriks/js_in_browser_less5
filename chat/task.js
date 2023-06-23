@@ -5,11 +5,12 @@ const answerList = [
     'Да, именно так',
     'Что то ответим',
 ]
-
+const chatCont = document.querySelector('.chat-widget__messages-container') 
 const chatWindow = document.querySelector('.chat-widget__messages')
 const message = document.querySelector('input')
 message.addEventListener('keydown', getMessage)
 const chat = document.querySelector('.chat-widget')
+
 document.querySelector('.chat-widget__side').addEventListener('click', () => {
     chat.classList.toggle('chat-widget_active')
 })
@@ -33,6 +34,8 @@ function getMessage(event) {
             </div>
             `
         }
+        chatCont.scrollTop = chatCont.scrollTopMax
+
         message.value = ''
        
     }
