@@ -72,7 +72,6 @@ class Autocomplete {
     let options = Array.from(document.querySelectorAll('option'))
     options = options.filter(el => el.innerText.toLowerCase().includes(text.toLowerCase()))
     options = options.map((el) => {return {text: el.innerText , 'value': el.value}})
-    console.log(options);
     /*
       TODO: этот метод нужно дописать
       text - фраза, которую вводят в поле поиска
